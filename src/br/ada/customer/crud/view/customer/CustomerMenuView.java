@@ -25,7 +25,7 @@ public class CustomerMenuView extends AbstractMenuOptionView implements MenuOpti
 
     @Override
     public void render() {
-        System.out.println(MENU_CODE + " - Customer");
+        System.out.println(MENU_CODE + " - Cliente");
     }
 
 

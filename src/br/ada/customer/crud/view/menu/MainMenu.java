@@ -1,6 +1,7 @@
 package br.ada.customer.crud.view.menu;
 
 import br.ada.customer.crud.factory.CustomerFactory;
+import br.ada.customer.crud.factory.OrderFactory;
 import br.ada.customer.crud.factory.ProductFactory;
 import br.ada.customer.crud.view.component.View;
 import br.ada.customer.crud.view.component.menu.impl.ExitOptionView;
@@ -24,7 +25,15 @@ public class MainMenu implements View {
                         ProductFactory.createUseCase(),
                         this
                 ),
-                new OrderMenuView(this),
+                new OrderMenuView(
+                        ProductFactory.createUseCase(),
+                        CustomerFactory.createUseCase(),
+                        OrderFactory.createUseCase(),
+                        OrderFactory.orderItemUseCase(),
+                        OrderFactory.placeOrderUseCase(),
+                        OrderFactory.payOrderUseCase(),
+                        OrderFactory.shippingUseCase(),
+                        this),
                 new ExitOptionView()
         ));
         subMenuView.render();

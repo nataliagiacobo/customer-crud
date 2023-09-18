@@ -15,7 +15,7 @@ public class ExampleOrderMain {
     public static void main(String[] args) {
         IProductUseCase productUseCase = ProductFactory.createUseCase();
         ICustomerUseCase customerUseCase = CustomerFactory.createUseCase();
-        ICreateOrderUseCase orderUseCase = OrderFactory.createUseCase();
+        IOrderUseCase orderUseCase = OrderFactory.createUseCase();
         IOrderItemUseCase orderItemUseCase = OrderFactory.orderItemUseCase();
         IOrderPlaceUseCase orderPlaceUseCase = OrderFactory.placeOrderUseCase();
         IOrderPayUseCase orderPayUseCase = OrderFactory.payOrderUseCase();

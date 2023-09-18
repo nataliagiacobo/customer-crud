@@ -14,7 +14,7 @@ public class CustomerTableModelView implements ITableModelView<Customer> {
         headers[0] = new SimpleTextView("id", 10);
         headers[1] = new SimpleTextView("nome", 20);
         headers[2] = new SimpleTextView("document", 15);
-        headers[3] = new SimpleTextView("email", 20);
+        headers[3] = new SimpleTextView("email", 30);
         headers[4] = new SimpleTextView("telefone", 20);
         headers[5] = new SimpleTextView("data nasc.", 10);
         return headers;
@@ -26,7 +26,7 @@ public class CustomerTableModelView implements ITableModelView<Customer> {
         line[0] = new SimpleTextView(customer.getId().toString(), 10);
         line[1] = new SimpleTextView(customer.getName(), 20);
         line[2] = new SimpleTextView(customer.getDocument(), 15);
-        line[3] = new SimpleTextView(customer.getEmail().toString(), 20);
+        line[3] = new SimpleTextView(customer.getEmail().toString(), 30);
         line[4] = new SimpleTextView(customer.getTelephone().toString(), 20);
         line[5] = new FormattedTextView<>(customer.getBirthDate(), 10, new DateTextConverter());
         return line;
